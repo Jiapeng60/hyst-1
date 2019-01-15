@@ -410,6 +410,13 @@ public class SpaceExPrinter extends ToolPrinter
 			for (String v : config.settings.plotVariableNames)
 				sed.addOutputVar(v);
 		}
+		else if (outputVars.equals("*"))
+		{
+			for (String v : ha.variables)
+			{
+				sed.addOutputVar(v);
+			}
+		}
 		else
 		{
 			for (String var : outputVars.split(","))
